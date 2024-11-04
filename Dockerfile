@@ -1,0 +1,13 @@
+FROM python:3.12.0b1-slim-buster
+
+RUN apt-get -y update
+RUN apt-get -y upgrade
+RUN apt-get install -y ffmpeg
+
+COPY requirements.txt ./
+COPY constraints.txt ./
+RUN python -m pip install -c constraints.txt -r requirements.txt
+
+COPY ./src/ /src
+WORKDIR /src
+CMD python -m foxkids

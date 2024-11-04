@@ -1,0 +1,10 @@
+pdoc3
+sqlalchemy
+dynaconf
+fastapi
+pydantic
+uvicorn
+schedule
+python-multipart
+Jinja2
+pre-commit

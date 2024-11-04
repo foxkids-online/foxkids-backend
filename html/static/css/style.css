@@ -1,0 +1,215 @@
+body {
+    margin: 0px;
+}
+
+
+
+.main-background {
+    text-align: center;
+    background-image: url('../sources/site/background.png');
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    background-color: #0f0f0f;
+    min-height: 97vh;
+    width:  840px;
+    border-radius: 16px;
+    padding-right: 16px;
+    display: inline-flex;
+    font-family: "Comics";
+}
+
+.side-panel {
+    padding: 32px 16px 90px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 175px;
+}
+
+.side-panel-img-1 {
+    background-image: url('../sources/site/mainlogo.png');
+    background-size: cover;
+    height: 139px;
+    width: 138px;
+}
+
+.side-panel-img-2 {
+    background-image: url('../sources/site/beetleborgs_logo.png');
+    background-size: cover;
+    width: 142px;
+    height: 101px;
+}
+
+.side-panel-img-3 {
+    background-image: url('../sources/site/spiderman_logo.png');
+    background-size: cover;
+    width: 145px;
+    height: 85px;
+}
+
+.side-panel-img-4 {
+    background-image: url('../sources/site/ash.png');
+    background-size: cover;
+    width: 138px;
+    height: 284px;
+}
+
+.header {
+    margin: 0px;
+    height: 32px;
+    color: rgb(247, 247, 247);
+    font-size: 12px;
+    display: flex;
+    justify-content: end;
+}
+
+.footer {
+    width: 100%;
+    height: 100px;
+    color: rgb(244, 244, 244);
+    font-size: 12px;
+}
+.footer-item {
+    margin-bottom: 0px; 
+}
+
+.twitter {
+    background-image: url('../sources/site/telegram.png');
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+}
+
+.youtube {
+    background-image: url('../sources/site/youtube.png');
+    width: 50px;
+    height: 30px;
+    background-size: cover;
+}
+
+.vk {
+    background-image: url('../sources/site/vk2.png');
+    width: 36px;
+    height: 30px;
+    background-size: cover;
+    margin-left: 11px;
+}
+
+.red-container {
+
+    background-color: #940203;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.giflogo {
+    background-image: url('../sources/site/foxlogo2.gif');
+    width: 66px;
+    height: 61px;
+    background-size: cover;
+}
+
+li {
+    list-style-type: none;
+    /* Убираем маркеры */
+}
+
+.header-item {
+    color: #f4f4f4;
+}
+
+.about-project-promo {
+    background-image: url('../sources/site/about_project_logo.png');
+    border: 4px solid #000;
+    height: 330px;
+    width: 580px;
+    background-size: cover;
+}
+
+.about-channel-promo {
+    background-image: url('../sources/site/about_channel_promo.png');
+    border: 4px solid #000;
+    height: 428px;
+    width: 580px;
+    background-size: cover;
+}
+
+.about-project-text{
+    background-color: #f2fc01;
+    border: 4px solid;
+    font-size: 12px;
+    font-weight:700;
+    padding: 6px;
+    text-align: start;
+    width: 580px;
+    margin: 4px 0px;
+}
+
+.player-container{
+    background-color: #0f0f0f;
+    height: 360px ;
+    margin: 0 auto;
+    text-align: center;
+    width: 512px ;
+}
+
+.current-promo{
+    background-color: #f2fc01;
+    font-size: 12px;
+    padding: 8px 20px;
+    text-align: left;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.promo-img{
+    background-image: url('../sources/site/promo.png');
+    border: 2px solid #000;
+    border-radius: 4px;
+    height: 50px;
+    width: 100px;
+    background-size: cover;
+}
+
+.series-card {
+    background-color: #f2fc01;
+    border: 7px solid;
+    display: flex;
+    font-size: 11px;
+    font-weight: 700;
+    justify-content: space-between;
+    margin: 10px;
+    text-align: start;
+}
+
+.series-card-logo{
+    height: 150px;
+    width: 100px;
+    background-size: cover;
+    background-image: url('../sources/series/pigcity.png');
+}
+
+.player-marquee{
+    width: 640px;
+    background-color: #0f0f0f;
+    color: #f4f4f4;
+    font-size: 12px;
+}
+
+.player-marquee-top {
+    height: 17px;
+    width: 640px;
+    background-color: #0f0f0f;
+    border-radius: 8px 8px 0px 0px;
+}
+
+

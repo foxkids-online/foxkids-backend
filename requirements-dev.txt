@@ -1,0 +1,17 @@
+pdoc3
+sqlalchemy
+dynaconf
+fastapi
+pydantic
+uvicorn
+schedule
+python-multipart
+Jinja2
+mypy
+pytest
+pytest-cov
+flake8
+isort
+black
+pytest-env
+pre-commit

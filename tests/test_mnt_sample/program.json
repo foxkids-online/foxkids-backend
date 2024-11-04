@@ -1,0 +1,19 @@
+[
+    {
+        "name": "foxkids",
+        "weekday": 5,
+        "index_in_weekday": 0,
+        "series_list": [
+            "luie",
+            "spider_man"
+        ]
+    },
+    {
+        "name": "nikelodeon",
+        "weekday": 5,
+        "index_in_weekday": 2,
+        "series_list": [
+            "ginger"
+        ]
+    }
+]

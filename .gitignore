@@ -1,0 +1,8 @@
+__pycache__
+.env
+htmlcov
+.pytest_cache
+poetry.lock
+.coverage
+*cache
+dev_mnt_sample
