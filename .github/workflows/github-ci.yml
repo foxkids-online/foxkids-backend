@@ -45,6 +45,6 @@ jobs:
       - name: Install poetry
         run:  pip3 install poetry==1.8.3
       - name: Install linters
-        run: poetry install --no-root --only dev
+        run: poetry install --no-root --only test
       - name: Run tests
         run: poetry run pytest -s
