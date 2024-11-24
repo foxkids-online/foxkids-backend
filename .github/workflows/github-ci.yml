@@ -17,7 +17,9 @@ jobs:
     #   - name: Install python3.12
     #     run: apt install python3.12
       - name: Install poetry
-        run: pip3 install poetry
+        run: |
+            pip3 install poetry 
+            poetry init
       - name: Install linters
         run: poetry install --with dev
       - name: Isort cheking
