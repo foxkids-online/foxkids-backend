@@ -48,3 +48,20 @@ jobs:
         run: poetry install --no-root --without dev
       - name: Run tests
         run: poetry run pytest tests -s
+  build:
+    name: Build and publish
+    needs: [tests]
+    runs-on: ubuntu-latest
+    if: ${{ needs.tests.result == 'success'}}
+    env:
+      REPO: ${{ github.event.repository.full_name }}
+      BRANCH: ${{ github.head_ref || github.ref_name }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Login into dockerhub
+        run:  echo "${{ secrets.DOCKER_TOKEN }}" | docker login "${{ vars.DOCKER_PATH }}" -u "${{ vars.DOCKER_USER }}" --password-stdin
+      - name: Build Image
+        run: docker build . -t ${{ vars.DOCKER_REGISTRY }}:${{ vars.DOCKER_TAG }} --no-cache
+      - name: Publish Image
+        run: docker push ${{ vars.DOCKER_REGISTRY }}:${{ vars.DOCKER_TAG }}
