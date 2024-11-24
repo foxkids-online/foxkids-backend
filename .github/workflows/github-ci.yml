@@ -37,5 +37,14 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ needs.linters.result == 'success'}}
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install poetry
+        run:  pip3 install poetry==1.8.3
+      - name: Install linters
+        run: poetry install --no-root --only dev
       - name: Run tests
         run: poetry run -m pytest -s
