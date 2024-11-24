@@ -47,4 +47,4 @@ jobs:
       - name: Install linters
         run: poetry install --no-root --only dev
       - name: Run tests
-        run: poetry run -m pytest -s
+        run: python run -m pytest -s
