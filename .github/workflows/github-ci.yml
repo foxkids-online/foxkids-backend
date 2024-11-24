@@ -16,12 +16,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-    #   - name: Install python3.12
-    #     run: apt install python3.12
       - name: Install poetry
-        run: |
-            pip3 install poetry==1.8.3
-            poetry init
+        run:  pip3 install poetry==1.8.3
       - name: Install linters
         run: poetry install --no-root --only dev
       - name: Isort cheking
