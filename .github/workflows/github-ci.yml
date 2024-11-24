@@ -35,7 +35,7 @@ jobs:
     name: Autotests
     needs: [linters]
     runs-on: ubuntu-latest
-    if: ${{ needs.build.result == 'success'}}
+    if: ${{ needs.linters.result == 'success'}}
     steps:
       - name: Run tests
         run: python -m pytest -s
