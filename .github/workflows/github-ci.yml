@@ -24,10 +24,10 @@ jobs:
       - name: Install linters
         run: poetry install --no-root --only dev
       - name: Isort cheking
-        run: isort  --diff  --settings-path pyproject.toml .
+        run: poetry run isort  --diff  --settings-path pyproject.toml .
       - name: Black cheking
-        run: isort  --diff  --config pyproject.toml .
+        run: poetry run black  --diff  --config pyproject.toml .
       - name: Flake8 cheking
-        run: flake8 --config pyproject.toml .
+        run: poetry run flake8 --config pyproject.toml .
       - name: Mypy cheking
-        run: mypy --config pyproject.toml .
+        run: poetry run mypy --config pyproject.toml .
