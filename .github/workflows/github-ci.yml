@@ -38,4 +38,4 @@ jobs:
     if: ${{ needs.linters.result == 'success'}}
     steps:
       - name: Run tests
-        run: python -m pytest -s
+        run: poetry run -m pytest -s
