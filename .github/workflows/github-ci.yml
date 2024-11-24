@@ -21,7 +21,7 @@ jobs:
             pip3 install poetry==1.8.3
             poetry init
       - name: Install linters
-        run: poetry install --only dev --no-root
+        run: poetry install --no-root --only dev
       - name: Isort cheking
         run: isort  --diff  --settings-path pyproject.toml .
       - name: Black cheking
