@@ -14,10 +14,10 @@ jobs:
     name: Linters
     runs-on: ubuntu-latest
     steps:
-      - name: Install python3.12
-        run: apt install python3.12
+    #   - name: Install python3.12
+    #     run: apt install python3.12
       - name: Install poetry
-        run: pip install poetry && poetry init && poetry shell
+        run: pip3 install poetry && poetry init && poetry shell
       - name: Install linters
         run: poetry install --with dev
       - name: Isort cheking
