@@ -31,3 +31,11 @@ jobs:
         run: poetry run flake8 --config pyproject.toml .
       - name: Mypy cheking
         run: poetry run mypy --config pyproject.toml .
+  tests:
+    name: Autotests
+    needs: [linters]
+    runs-on: ubuntu-latest
+    if: ${{ needs.build.result == 'success'}}
+    steps:
+      - name: Run tests
+        run: python -m pytest -s
