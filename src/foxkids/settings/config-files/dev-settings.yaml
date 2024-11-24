@@ -1,8 +1,8 @@
 development:
-  COUNT_COMMERTIALS: 2
+  COUNT_COMMERTIALS: 1
   TIME_START: 07:00
-  STREAM_URL: rtmp://server_rtmp:1935/stream/test
-  MAIN_FOLDER: dev_mnt_sample/foxkids
+  STREAM_URL: rtmp://server:1935/stream/test
+  MAIN_FOLDER: /mnt/foxkids
   FILE_PROGRAM: dev_mnt_sample/program.json
   FILE_SERIES: dev_mnt_sample/series.json
   FILE_STREAM: dev_mnt_sample/stream.sh
@@ -10,5 +10,5 @@ development:
   BLOCK_PROMO_FOLDER: reklama_block
   COMMERTIALS_FOLDER: reklama_random
   PLAY_SCRIPT: ffmpeg  -re -i {} -c:a aac -c:v libx264 -b:v 200k -b:a 64K -r 25 -s 320x240 -f flv {}
-  CURL_SCRIPT: "curl -X POST https://reqbin.com/echo/post/json -H \"Content-Type: application/json\" -d '{{\"current_series\": \"{}\", \"next_series\": \"{}\"}}'"
-  PORT: 8001
+  CURL_SCRIPT: "curl -X POST http://server/api/current_promo/ -H \"Content-Type: application/json\" -d '{{\"current_series\": \"{}\", \"next_series\": \"{}\"}}'"
+  PORT: 8000

@@ -9,30 +9,9 @@ def test_block_to_json():
         index_in_weekday=0,
         series_list=[indiana, indiana],
     )
-    print(block.to_dict())
-    print(block)
     assert block.to_dict() == {
         "name": "foxkids",
         "weekday": 0,
         "index_in_weekday": 0,
-        "series_list": [
-            {
-                "name": "indiana",
-                "count": 10,
-                "current": 1,
-                "year": None,
-                "genre": "",
-                "name_rus": "",
-                "description": "",
-            },
-            {
-                "name": "indiana",
-                "count": 10,
-                "current": 1,
-                "year": None,
-                "genre": "",
-                "name_rus": "",
-                "description": "",
-            },
-        ],
+        "series_list": ["indiana", "indiana"],
     }

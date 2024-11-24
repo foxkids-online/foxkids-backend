@@ -83,7 +83,7 @@ class FileReaderWriter:
 
         for record in program_json:
             record["series_list"] = list(
-                filter(lambda x: x.name in program, series_list)
+                filter(lambda x: x.name in record["series_list"], series_list)
             )
             block = Block(**record)
             program.append(block)

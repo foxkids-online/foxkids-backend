@@ -1,0 +1,17 @@
+services:
+  backend:
+    container_name: backend
+    build: 
+      context: ./
+      dockerfile: Dockerfile
+    environment: 
+      ENV_FOR_DYNACONF: production
+    volumes:
+      - /foxkids_full/:/mnt/
+    networks:
+      - foxkids_network
+
+networks:
+  foxkids_network:
+    driver: bridge
+    name: foxkids_network

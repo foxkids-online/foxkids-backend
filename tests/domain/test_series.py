@@ -26,7 +26,6 @@ def test_increase_last_seria():
 
 def test_to_dict():
     seria = Series(name="spider-man", count=20, current=20)
-    print(seria.to_dict())
     assert {
         "count": 20,
         "current": 20,

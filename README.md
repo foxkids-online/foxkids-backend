@@ -57,6 +57,9 @@ dev-setttings.yaml - дев среда
 test-settings.yaml - среда тестирования, с нее запускаются автотесты  
 prod-settings.yaml - прод  
 
+Dockerfile - прод среда
+Dockerfile-dev - дев среда
+
 | Название переменной | Значение | Пример заполнения                                                                       |
 | ------------------- | ------------------------------- | ---------------------------------------------------------------- |
 | COUNT_COMMERTIALS   | количество реклам между блоками | 2                                                                |
@@ -75,11 +78,11 @@ prod-settings.yaml - прод
 
 полный шаблон маски скрипта: 
 
-ffmpeg  -re -i {файл} -c:a aac -c:v libx264 -b:v 200k -b:a 64K -r 25 -s 320x240 -f flv {адрес трансляции}
+`ffmpeg  -re -i {файл} -c:a aac -c:v libx264 -b:v 200k -b:a 64K -r 25 -s 320x240 -f flv {адрес трансляции}`
 
 полный адрес скрипта для установки промо следующей серии
 
-curl -X POST https://reqbin.com/echo/post/json -H \"Content-Type: application/json\" -d '{{\"current_series\": \"{}\", \"next_series\": \"{}\"}}'
+`curl -X POST https://reqbin.com/echo/post/json -H \"Content-Type: application/json\" -d '{{\"current_series\": \"{}\", \"next_series\": \"{}\"}}'`
 
 ## Линтеры
 

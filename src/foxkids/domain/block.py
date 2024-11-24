@@ -31,10 +31,18 @@ class Block:
 
     def __eq__(self, other):
         if isinstance(other, Block):
+            series_is_eq = True
+            for this_series in self.series_list:
+                for other_series in other.series_list:
+                    if other_series == this_series:
+                        continue
+                    series_is_eq = False
+
             return (
                 self.name == other.name
                 and self.weekday == other.weekday
                 and self.index_in_weekday == other.index_in_weekday
+                and series_is_eq
             )
         return NotImplemented
 
@@ -45,5 +53,5 @@ class Block:
     def to_dict(self) -> dict:
         return {
             **self.__dict__,
-            "series_list": [i.to_dict() for i in self.series_list],
+            "series_list": [i.name for i in self.series_list],
         }

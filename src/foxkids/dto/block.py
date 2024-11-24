@@ -1,7 +1,5 @@
 from pydantic import BaseModel, Field
 
-from .series import SeriesDTO
-
 
 class BlockDTO(BaseModel):
 
@@ -12,4 +10,4 @@ class BlockDTO(BaseModel):
     index_in_weekday: int = Field(
         ge=0, le=100, description="Номер блока внутри программы на день"
     )
-    series_list: list[SeriesDTO]
+    series_list: list[str]
