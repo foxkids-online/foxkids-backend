@@ -8,9 +8,6 @@ on:
 
   # позволяет ручной запуск
   workflow_dispatch:
-env:
-  REPO: ${{ github.event.repository.full_name }}
-  BRANCH: ${{ github.head_ref || github.ref_name }}
 jobs:
   frontend:
     name: Add html files
@@ -23,6 +20,6 @@ jobs:
           username: ${{ vars.SSH_USER }}
           port: 22
           key: ${{ secrets.SSH_KEY }}
-          source: ./html/*
+          source: html/*
           target: ${{ vars.WORKDIR }}backend/html/
      
