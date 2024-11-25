@@ -1,8 +1,11 @@
 __pycache__
 htmlcov
 .pytest_cache
+*cache
 poetry.lock
 .coverage
 *cache
 tests
 .gitignore
+.env
+html

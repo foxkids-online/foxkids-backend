@@ -14,17 +14,57 @@ jobs:
     name: Linters
     runs-on: ubuntu-latest
     steps:
-      - name: Install python3.12
-        run: apt install python3.12
+      - name: Checkout
+        uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
       - name: Install poetry
-        run: pip install poetry && poetry init && poetry shell
+        run:  pip3 install poetry==1.8.3
       - name: Install linters
-        run: poetry install --with dev
+        run: poetry install --no-root --only dev
       - name: Isort cheking
-        run: isort  --diff  --settings-path pyproject.toml .
+        run: poetry run isort  --diff  --settings-path pyproject.toml .
       - name: Black cheking
-        run: isort  --diff  --config pyproject.toml .
+        run: poetry run black  --diff  --config pyproject.toml .
       - name: Flake8 cheking
-        run: flake8 --config pyproject.toml .
+        run: poetry run flake8 --config pyproject.toml .
       - name: Mypy cheking
-        run: mypy --config pyproject.toml .
+        run: poetry run mypy --config pyproject.toml .
+  tests:
+    name: Autotests
+    needs: [linters]
+    runs-on: ubuntu-latest
+    if: ${{ needs.linters.result == 'success'}}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install poetry
+        run:  pip3 install poetry==1.8.3
+      - name: Install dependencies
+        run: poetry install --no-root --without dev
+      - name: Run tests
+        run: poetry run pytest tests -s
+  build:
+    name: Build and publish
+    needs: [tests]
+    runs-on: ubuntu-latest
+    if: ${{ needs.tests.result == 'success'}}
+    env:
+      REPO: ${{ github.event.repository.full_name }}
+      BRANCH: ${{ github.head_ref || github.ref_name }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Login into dockerhub
+        run:  echo "${{ secrets.DOCKER_TOKEN }}" | docker login "${{ vars.DOCKER_PATH }}" -u "${{ vars.DOCKER_USER }}" --password-stdin
+      - name: Build Image
+        run: docker build . -t ${{ vars.DOCKER_REGISTRY }}:${{ vars.DOCKER_TAG }} --no-cache
+      - name: Publish Image
+        run: docker push ${{ vars.DOCKER_REGISTRY }}:${{ vars.DOCKER_TAG }}
+  frontend:
+    name: Add html files
+    needs: [tests]
