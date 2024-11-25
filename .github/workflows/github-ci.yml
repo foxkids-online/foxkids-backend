@@ -1,6 +1,6 @@
 # Доставка на сервер
 
-name: cd
+name: cd-backend
 
 on:
   pull_request:
