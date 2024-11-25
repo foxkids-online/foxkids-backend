@@ -23,6 +23,6 @@ jobs:
           username: ${{ vars.SSH_USER }}
           port: 22
           key: ${{ secrets.SSH_KEY }}
-          source: "html"
+          source: "./html/"
           target: "${{ vars.WORKDIR }}/backend/html"
      
