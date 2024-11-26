@@ -8,7 +8,10 @@ on:
 
   # позволяет ручной запуск
   workflow_dispatch:
-  
+env:
+  REPO: ${{ github.event.repository.full_name }}
+  BRANCH: ${{ github.head_ref || github.ref_name }}
+
 jobs:
   linters:
     name: Linters
@@ -53,9 +56,6 @@ jobs:
     needs: [tests]
     runs-on: ubuntu-latest
     if: ${{ needs.tests.result == 'success'}}
-    env:
-      REPO: ${{ github.event.repository.full_name }}
-      BRANCH: ${{ github.head_ref || github.ref_name }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
