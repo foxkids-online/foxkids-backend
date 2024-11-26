@@ -1,3 +1,4 @@
+version: "3"
 services:
   backend:
     container_name: backend
@@ -16,4 +17,3 @@ services:
 networks:
   foxkids_network:
     driver: bridge
-    name: foxkids_network
