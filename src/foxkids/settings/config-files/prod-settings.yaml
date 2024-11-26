@@ -4,9 +4,9 @@ production:
   TIME_START: 07:00
   STREAM_URL: rtmp://server:1935/stream/test #адрес внутреннего контейнера nginx
   MAIN_FOLDER: /mnt/foxkids #адрес папки с сериалами прод контейнера
-  FILE_PROGRAM: /settings/program.json
-  FILE_SERIES: /settings/series.json
-  FILE_STREAM: /settings/stream.sh
+  FILE_PROGRAM: /series_settings/program.json
+  FILE_SERIES: /series_settings/series.json
+  FILE_STREAM: /series_settings/stream.sh
   PROMO_FOLDER: reklama # адрес папки реклам внутри расшаренной папки
   BLOCK_PROMO_FOLDER: reklama_block
   COMMERTIALS_FOLDER: reklama_random
