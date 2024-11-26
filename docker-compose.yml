@@ -7,7 +7,7 @@ services:
       ENV_FOR_DYNACONF: production
     volumes:
       - ./series_settings/:/series_settings/
-      - /foxkids_full/:/mnt/
+      # - /foxkids_full/:/mnt/
       - ./html/:/src/html/
     networks:
       - foxkids_network

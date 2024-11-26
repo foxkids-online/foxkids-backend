@@ -1,14 +1,15 @@
 import os
-import time
+
+# import time
 from datetime import datetime
 from multiprocessing import Process
-
-import schedule
 
 from foxkids.adapters import AbstractRepository, ScriptManager, Storage
 from foxkids.domain.features import get_series_list_by_day, increment_series
 from foxkids.settings import settings
 from foxkids.utils.bash_formatter import create_program_row
+
+# import schedule
 
 
 class StreamService:
@@ -118,10 +119,10 @@ class StreamService:
     def start_stream_script(self):
         os.system(f"sh {self.script_manager.file_stream}")
 
-    def start_stream_scheduled(self):
+    # def start_stream_scheduled(self):
 
-        schedule.every().day.at(settings.TIME_START).do(self.start)
+    #     schedule.every().day.at(settings.TIME_START).do(self.start)
 
-        while True:
-            schedule.run_pending()
-            time.sleep(1)
+    #     while True:
+    #         schedule.run_pending()
+    #         time.sleep(1)
