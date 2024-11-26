@@ -2,7 +2,7 @@ version: "3"
 services:
   backend:
     container_name: backend
-    image: zipkortnicks57/foxkids_online:nginx-server
+    image: zipkortnicks57/foxkids_online:backend
     environment: 
       ENV_FOR_DYNACONF: production
     volumes:
