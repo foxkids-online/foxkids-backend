@@ -7,7 +7,8 @@ $.ajax({
         console.log(data1)
         $.map(data1, function (i) {
             console.log(i)
-            let template = `
+            if (i.name_rus !== "") {
+                let template = `
         <div  class="series-card">
             <div class="p-2">
                 <div class="font-weight-bold text-uppercase">${i.name_rus}</div>
@@ -22,8 +23,9 @@ $.ajax({
         </div>
         `
 
-            $('#series').append(template);
-            $(`#${i.name}`).css('background-image', `url('./static/sources/series/${i.name}.png')`)
+                $('#series').append(template);
+                $(`#${i.name}`).css('background-image', `url('./static/sources/series/${i.name}.png')`)
+            }
         })
     }
 })
