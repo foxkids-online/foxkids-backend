@@ -25,11 +25,11 @@ async def get_stream_script():
     return stream_service.get_stream_script()
 
 
-@stream_manager_router.post(
-    "/",
-    summary="Записать sh скрипт",
-    description="Записывает скрипт трансляции из файла",
-)
+# @stream_manager_router.post(
+#     "/",
+#     summary="Записать sh скрипт",
+#     description="Записывает скрипт трансляции из файла",
+# )
 def upload(file: UploadFile = File(...)):
     contents = file.file.readlines()
     stream_service.write_stream_script(
