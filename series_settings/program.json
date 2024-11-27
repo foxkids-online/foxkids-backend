@@ -1,0 +1,562 @@
+[
+    {
+        "weekday": 0,
+        "index_in_weekday": 0,
+        "name": "foxkids",
+        "series_list": [
+            "denis",
+            "wunshpunsh",
+            "luie",
+            "andy",
+            "kids402",
+            "bobby",
+            "flint",
+            "peter_pan",
+            "tomnjerry"
+        ]
+    },
+    {
+        "weekday": 0,
+        "index_in_weekday": 1,
+        "name": "nickelodeon",
+        "series_list": [
+            "ginger"
+        ]
+    },
+    {
+        "weekday": 0,
+        "index_in_weekday": 2,
+        "name": "foxkids",
+        "series_list": [
+            "malon",
+            "pinoccio",
+            "twist",
+            "monster_farm",
+            "tick",
+            "sissi",
+            "spydogs",
+            "tarakan",
+            "rangers",
+            "spider_man",
+            "iron_man",
+            "batman",
+            "addams",
+            "indiana"
+        ]
+    },
+    {
+        "weekday": 0,
+        "index_in_weekday": 3,
+        "name": "foxkids",
+        "series_list": [
+            "denis",
+            "wunshpunsh",
+            "luie",
+            "andy",
+            "kids402",
+            "bobby",
+            "flint",
+            "peter_pan",
+            "tomnjerry",
+            "marina",
+            "malon",
+            "pinoccio",
+            "twist",
+            "monster_farm",
+            "tick",
+            "sissi",
+            "spydogs",
+            "tarakan",
+            "rangers",
+            "spider_man",
+            "iron_man",
+            "batman",
+            "addams",
+            "indiana"
+        ]
+    },
+    {
+        "weekday": 0,
+        "index_in_weekday": 4,
+        "name": "bibigon",
+        "series_list": [
+            "islands"
+        ]
+    },
+    {
+        "weekday": 1,
+        "index_in_weekday": 0,
+        "name": "foxkids",
+        "series_list": [
+            "denis",
+            "eak",
+            "luie",
+            "andy",
+            "kids402",
+            "bobby",
+            "button_nose",
+            "peter_pan",
+            "hitkliff"
+        ]
+    },
+    {
+        "weekday": 1,
+        "index_in_weekday": 1,
+        "name": "nickelodeon",
+        "series_list": [
+            "ginger"
+        ]
+    },
+    {
+        "weekday": 1,
+        "index_in_weekday": 2,
+        "name": "foxkids",
+        "series_list": [
+            "gadget",
+            "pinoccio",
+            "jim_button",
+            "jack_pirate",
+            "diabolik",
+            "totally_spice",
+            "spydogs",
+            "pigcity",
+            "beetleborgs",
+            "spider_man",
+            "xmen",
+            "22Z",
+            "goosehumbs",
+            "indiana"
+        ]
+    },
+    {
+        "weekday": 1,
+        "index_in_weekday": 3,
+        "name": "foxkids",
+        "series_list": [
+            "denis",
+            "eak",
+            "luie",
+            "andy",
+            "kids402",
+            "bobby",
+            "button_nose",
+            "peter_pan",
+            "hitkliff",
+            "marina",
+            "gadget",
+            "pinoccio",
+            "jim_button",
+            "jack_pirate",
+            "diabolik",
+            "totally_spice",
+            "spydogs",
+            "pigcity",
+            "beetleborgs",
+            "spider_man",
+            "xmen",
+            "22Z",
+            "goosehumbs",
+            "indiana"
+        ]
+    },
+    {
+        "weekday": 1,
+        "index_in_weekday": 4,
+        "name": "bibigon",
+        "series_list": [
+            "snobs"
+        ]
+    },
+    {
+        "weekday": 2,
+        "index_in_weekday": 0,
+        "name": "foxkids",
+        "series_list": [
+            "denis",
+            "wunshpunsh",
+            "luie",
+            "andy",
+            "kids402",
+            "bobby",
+            "flint",
+            "peter_pan",
+            "tomnjerry"
+        ]
+    },
+    {
+        "weekday": 2,
+        "index_in_weekday": 1,
+        "name": "nickelodeon",
+        "series_list": [
+            "ginger"
+        ]
+    },
+    {
+        "weekday": 2,
+        "index_in_weekday": 2,
+        "name": "foxkids",
+        "series_list": [
+            "malon",
+            "pinoccio",
+            "twist",
+            "monster_farm",
+            "tick",
+            "sissi",
+            "spydogs",
+            "tarakan",
+            "rangers",
+            "spider_man",
+            "hulk",
+            "batman",
+            "addams",
+            "indiana"
+        ]
+    },
+    {
+        "weekday": 2,
+        "index_in_weekday": 3,
+        "name": "foxkids",
+        "series_list": [
+            "denis",
+            "wunshpunsh",
+            "luie",
+            "andy",
+            "kids402",
+            "bobby",
+            "flint",
+            "peter_pan",
+            "tomnjerry",
+            "marina",
+            "malon",
+            "pinoccio",
+            "twist",
+            "monster_farm",
+            "tick",
+            "sissi",
+            "spydogs",
+            "tarakan",
+            "rangers",
+            "spider_man",
+            "hulk",
+            "batman",
+            "addams",
+            "indiana"
+        ]
+    },
+    {
+        "weekday": 2,
+        "index_in_weekday": 4,
+        "name": "bibigon",
+        "series_list": [
+            "islands"
+        ]
+    },
+    {
+        "weekday": 3,
+        "index_in_weekday": 0,
+        "name": "foxkids",
+        "series_list": [
+            "denis",
+            "eak",
+            "luie",
+            "andy",
+            "kids402",
+            "bobby",
+            "button_nose",
+            "peter_pan",
+            "hitkliff"
+        ]
+    },
+    {
+        "weekday": 3,
+        "index_in_weekday": 1,
+        "name": "nickelodeon",
+        "series_list": [
+            "ginger"
+        ]
+    },
+    {
+        "weekday": 3,
+        "index_in_weekday": 2,
+        "name": "foxkids",
+        "series_list": [
+            "gadget",
+            "pinoccio",
+            "jim_button",
+            "jack_pirate",
+            "diabolik",
+            "totally_spice",
+            "spydogs",
+            "pigcity",
+            "beetleborgs",
+            "spider_man",
+            "xmen",
+            "22Z",
+            "goosehumbs",
+            "indiana"
+        ]
+    },
+    {
+        "weekday": 3,
+        "index_in_weekday": 3,
+        "name": "foxkids",
+        "series_list": [
+            "denis",
+            "eak",
+            "luie",
+            "andy",
+            "kids402",
+            "bobby",
+            "button_nose",
+            "peter_pan",
+            "hitkliff",
+            "marina",
+            "gadget",
+            "pinoccio",
+            "jim_button",
+            "jack_pirate",
+            "diabolik",
+            "totally_spice",
+            "spydogs",
+            "pigcity",
+            "beetleborgs",
+            "spider_man",
+            "xmen",
+            "22Z",
+            "goosehumbs",
+            "indiana"
+        ]
+    },
+    {
+        "weekday": 3,
+        "index_in_weekday": 4,
+        "name": "bibigon",
+        "series_list": [
+            "snobs"
+        ]
+    },
+    {
+        "weekday": 4,
+        "index_in_weekday": 0,
+        "name": "foxkids",
+        "series_list": [
+            "denis",
+            "wunshpunsh",
+            "luie",
+            "andy",
+            "kids402",
+            "bobby",
+            "flint",
+            "peter_pan",
+            "tomnjerry"
+        ]
+    },
+    {
+        "weekday": 4,
+        "index_in_weekday": 1,
+        "name": "nickelodeon",
+        "series_list": [
+            "ginger"
+        ]
+    },
+    {
+        "weekday": 4,
+        "index_in_weekday": 2,
+        "name": "foxkids",
+        "series_list": [
+            "malon",
+            "pinoccio",
+            "twist",
+            "monster_farm",
+            "tick",
+            "sissi",
+            "spydogs",
+            "tarakan",
+            "rangers",
+            "spider_man",
+            "iron_man",
+            "batman",
+            "addams",
+            "indiana"
+        ]
+    },
+    {
+        "weekday": 4,
+        "index_in_weekday": 3,
+        "name": "foxkids",
+        "series_list": [
+            "denis",
+            "wunshpunsh",
+            "luie",
+            "andy",
+            "kids402",
+            "bobby",
+            "flint",
+            "peter_pan",
+            "tomnjerry",
+            "marina",
+            "malon",
+            "pinoccio",
+            "twist",
+            "monster_farm",
+            "tick",
+            "sissi",
+            "spydogs",
+            "tarakan",
+            "rangers",
+            "spider_man",
+            "iron_man",
+            "batman",
+            "addams",
+            "indiana"
+        ]
+    },
+    {
+        "weekday": 4,
+        "index_in_weekday": 4,
+        "name": "bibigon",
+        "series_list": [
+            "islands"
+        ]
+    },
+    {
+        "weekday": 5,
+        "index_in_weekday": 0,
+        "name": "foxkids",
+        "series_list": [
+            "denis",
+            "eak",
+            "luie",
+            "andy",
+            "kids402",
+            "bobby",
+            "button_nose",
+            "peter_pan",
+            "hitkliff",
+            "marina",
+            "gadget",
+            "pinoccio",
+            "jim_button",
+            "jack_pirate",
+            "diabolik",
+            "totally_spice",
+            "spydogs",
+            "pigcity",
+            "beetleborgs",
+            "spider_man",
+            "hulk",
+            "tobikage",
+            "goosehumbs",
+            "indiana"
+        ]
+    },
+    {
+        "weekday": 5,
+        "index_in_weekday": 1,
+        "name": "foxkids",
+        "series_list": [
+            "denis",
+            "eak",
+            "luie",
+            "andy",
+            "kids402",
+            "bobby",
+            "button_nose",
+            "peter_pan",
+            "hitkliff",
+            "marina",
+            "gadget",
+            "pinoccio",
+            "jim_button",
+            "jack_pirate",
+            "diabolik",
+            "totally_spice",
+            "spydogs",
+            "pigcity",
+            "beetleborgs",
+            "spider_man",
+            "hulk",
+            "tobikage",
+            "goosehumbs",
+            "indiana"
+        ]
+    },
+    {
+        "weekday": 5,
+        "index_in_weekday": 2,
+        "name": "bibigon",
+        "series_list": [
+            "snobs"
+        ]
+    },
+    {
+        "weekday": 6,
+        "index_in_weekday": 0,
+        "name": "foxkids",
+        "series_list": [
+            "denis",
+            "eak",
+            "luie",
+            "andy",
+            "kids402",
+            "bobby",
+            "button_nose",
+            "peter_pan",
+            "hitkliff",
+            "marina",
+            "gadget",
+            "pinoccio",
+            "jim_button",
+            "jack_pirate",
+            "diabolik",
+            "sissi",
+            "spydogs",
+            "pigcity",
+            "beetleborgs",
+            "spider_man",
+            "xmen",
+            "tobikage",
+            "goosehumbs",
+            "indiana"
+        ]
+    },
+    {
+        "weekday": 6,
+        "index_in_weekday": 1,
+        "name": "foxkids",
+        "series_list": [
+            "denis",
+            "eak",
+            "luie",
+            "andy",
+            "kids402",
+            "bobby",
+            "button_nose",
+            "peter_pan",
+            "hitkliff",
+            "marina",
+            "gadget",
+            "pinoccio",
+            "jim_button",
+            "jack_pirate",
+            "diabolik",
+            "sissi",
+            "spydogs",
+            "pigcity",
+            "beetleborgs",
+            "spider_man",
+            "xmen",
+            "tobikage",
+            "goosehumbs",
+            "indiana"
+        ]
+    },
+    {
+        "weekday": 6,
+        "index_in_weekday": 2,
+        "name": "bibigon",
+        "series_list": [
+            "snobs"
+        ]
+    }
+]

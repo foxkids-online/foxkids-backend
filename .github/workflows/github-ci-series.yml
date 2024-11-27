@@ -1,6 +1,6 @@
 # Доставка фронтенда на сервер
 
-name: cd-frontend
+name: cd-series
 
 on:
   pull_request:
@@ -15,13 +15,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Deploy frontend
+      - name: Add series configs
         uses: appleboy/scp-action@master
         with:
           host: ${{ vars.SSH_HOST }}
           username: ${{ vars.SSH_USER }}
           port: 22
           key: ${{ secrets.SSH_KEY }}
-          source: html/*
+          source: series_settings/*
           target: ${{ vars.WORKDIR }}/backend/
      

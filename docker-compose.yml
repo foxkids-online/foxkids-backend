@@ -1,17 +1,17 @@
+version: "3"
 services:
   backend:
     container_name: backend
-    build: 
-      context: ./
-      dockerfile: Dockerfile
+    image: zipkortnicks57/foxkids_online:backend
     environment: 
       ENV_FOR_DYNACONF: production
     volumes:
+      - ./series_settings/:/series_settings/
       - /foxkids_full/:/mnt/
+      - ./html/:/src/html/
     networks:
       - foxkids_network
 
 networks:
   foxkids_network:
     driver: bridge
-    name: foxkids_network
