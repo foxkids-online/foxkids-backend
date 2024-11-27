@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 jobs:
   frontend:
-    name: Add html files
+    name: Add series configs
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
