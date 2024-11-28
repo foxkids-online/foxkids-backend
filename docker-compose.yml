@@ -2,6 +2,9 @@ version: "3"
 services:
   backend:
     container_name: backend
+    logging:
+      options:
+        max-size: "50m"
     image: zipkortnicks57/foxkids_online:backend
     environment: 
       ENV_FOR_DYNACONF: production
