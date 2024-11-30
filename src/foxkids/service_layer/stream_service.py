@@ -1,7 +1,6 @@
 import os
 import time
 from datetime import datetime
-from multiprocessing import Process
 
 import schedule
 
@@ -32,7 +31,6 @@ class StreamService:
         self.repository = repository
         self.storage = storage
         self.count_commertials = settings.COUNT_COMMERTIALS
-        self.stream_process = Process(target=self.start_stream_script)
         self.script_manager = script_manager
 
     def __create_stream(self) -> list[str]:
@@ -64,19 +62,13 @@ class StreamService:
                 commertials = [create_program_row(i) for i in commertials]
                 stream.extend(commertials)
 
-                # включить серию
+                # получить серию
                 series_path = self.storage.get_series(
                     series.name, series.current
                 )
                 series_row = create_program_row(series_path)
                 stream.append(series_row)
         return stream
-
-    def __increase_series(self):
-        today = datetime.now().weekday()
-        blocks = self.repository.get_blocks(today)
-        series = get_series_list_by_day(blocks)
-        increment_series(series)
 
     def __get_random_commertials(self) -> list[str]:
         commertials = []
@@ -88,35 +80,28 @@ class StreamService:
             counter -= 1
         return commertials
 
-    def get_stream_script(self):
-        return self.script_manager.get_stream_script()
-
-    def write_stream_script(self, lines: list[str]):
-        self.script_manager.write_stream_script(lines)
-
-    def start_manually(self):
+    def __start_script(self):
         """
-        запускает стрим без пересчета серий
+        просто запускает sh файл как есть
         """
-        self.stream_process.start()
+        os.system(f"sh {self.script_manager.file_stream}")
 
-    def start(self):
+    def start(self, increase_series: bool = True):
         """
         запускает стрим с пересчетом серий
+        если increase_series == True, то пересчитает серии
         """
-        series = self.__create_stream()
-        self.__increase_series()
-        self.script_manager.write_stream_script(series)
-        self.stream_process.start()
-
-    def stop(self):
-        """
-        останавливает процесс стриминга
-        """
-        self.stream_process.kill()
-
-    def start_stream_script(self):
-        os.system(f"sh {self.script_manager.file_stream}")
+        if increase_series:
+            lines = self.__create_stream()
+            self.script_manager.write_stream_script(
+                lines
+            )  # перезапись скрипта
+            today = datetime.now().weekday()
+            blocks = self.repository.get_blocks(today)  # пересчет серий
+            series_in_day = get_series_list_by_day(blocks)
+            updating_series = increment_series(series_in_day)
+            self.repository.update_series_list(updating_series)
+        self.__start_script()
 
     def start_stream_scheduled(self):
 
