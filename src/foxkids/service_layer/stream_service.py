@@ -110,4 +110,5 @@ class StreamService:
 
         while True:
             schedule.run_pending()
+            print(0)
             time.sleep(1)
