@@ -1,7 +1,7 @@
 
 production:
   COUNT_COMMERTIALS: 2
-  TIME_START: 20:32
+  TIME_START: 18:05
   STREAM_URL: rtmp://server:1935/stream/test #адрес внутреннего контейнера nginx
   MAIN_FOLDER: /mnt/foxkids #адрес папки с сериалами прод контейнера
   FILE_PROGRAM: /series_settings/program.json
