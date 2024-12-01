@@ -62,11 +62,11 @@ jobs:
       - name: Login into dockerhub
         run:  echo "${{ secrets.DOCKER_TOKEN }}" | docker login "${{ vars.DOCKER_PATH }}" -u "${{ vars.DOCKER_USER }}" --password-stdin
       - name: Build Image
-        run: docker build . -t ${{ vars.DOCKER_REGISTRY }}:${{ vars.DOCKER_TAG }} --no-cache
+        run: docker build . -t ${{ vars.DOCKER_TAG }} --no-cache
       - name: Publish Image
         run: |
           docker rmi $(docker images -q ${{ vars.DOCKER_REGISTRY }}:${{ vars.DOCKER_TAG }})
-          docker push ${{ vars.DOCKER_REGISTRY }}:${{ vars.DOCKER_TAG }}
+          docker push ${{ vars.DOCKER_TAG }}
   deploy:
     name: Deploy on stage
     runs-on: ubuntu-latest
