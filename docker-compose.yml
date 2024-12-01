@@ -9,9 +9,10 @@ services:
     environment: 
       ENV_FOR_DYNACONF: production
     volumes:
+      - /etc/localtime:/etc/localtime:ro
       - ./series_settings/:/series_settings/
-      - /foxkids_full/:/mnt/
-      - ./html/:/src/html/
+      - /foxkids_full/:/mnt/:ro
+      - ./html/:/src/html/:ro
     networks:
       - foxkids_network
 

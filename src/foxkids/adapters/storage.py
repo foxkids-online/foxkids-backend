@@ -7,11 +7,11 @@ MAIN_FOLDER_PATH = settings.MAIN_FOLDER
 
 
 def get_full_path(*kwargs) -> str | None:  # TODO: list(str) либо tuple
-    filename = os.path.join(MAIN_FOLDER_PATH, *kwargs).replace("\\", "/")
-    if os.path.isfile(filename) or os.path.isdir(filename):
-        return filename
-    else:
-        return None
+    return os.path.join(MAIN_FOLDER_PATH, *kwargs).replace("\\", "/")
+    # if os.path.isfile(filename) or os.path.isdir(filename):
+    #     return filename
+    # else:
+    #     return None
 
 
 def get_random_file_from_folder(
