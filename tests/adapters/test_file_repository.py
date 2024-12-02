@@ -46,4 +46,4 @@ def test_get_block():
     arr = repository.get_blocks()
     repository.clear_series()
     repository.clear_blocks()
-    assert arr[0] == block
+    assert arr[0] == block and len(arr[0].series_list) == 2
