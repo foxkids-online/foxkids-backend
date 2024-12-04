@@ -3,12 +3,10 @@ from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
-from foxkids.routes import (
+from foxkids.routes import (  # stream_manager_router,; stream_handler_router,
     block_router,
     current_promo_router,
     series_router,
-    stream_handler_router,
-    stream_manager_router,
 )
 
 app = FastAPI(title="Fox Kids Video Server API", version="0.1.2")
@@ -21,8 +19,8 @@ main_router = APIRouter(prefix="", tags=["Страницы сайта"])
 api_router.include_router(block_router)
 api_router.include_router(current_promo_router)
 api_router.include_router(series_router)
-api_router.include_router(stream_handler_router)
-api_router.include_router(stream_manager_router)
+# api_router.include_router(stream_handler_router)
+# api_router.include_router(stream_manager_router)
 
 
 @main_router.get(
