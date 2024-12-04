@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Deploy frontend
+      - name: Add html files
         uses: appleboy/scp-action@master
         with:
           host: ${{ vars.SSH_HOST }}

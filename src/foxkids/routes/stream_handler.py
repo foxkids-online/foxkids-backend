@@ -18,7 +18,7 @@ stream_handler_router = APIRouter(prefix="/stream", tags=["Стрим"])
     description="Запустить скрипт трансляции вручную",
 )
 async def start_manually():
-    stream_service.start_manually()
+    stream_service.start(increase_series=False)
     return {"message": "Скрипт запущен"}
 
 
@@ -30,11 +30,3 @@ async def start_manually():
 async def start_stream():
     stream_service.start()
     return {"message": "Стрим запущен"}
-
-
-@stream_handler_router.get(
-    "/stop", summary="Остановить стрим", description="Остановить трансляцию"
-)
-async def stop_stream():
-    stream_service.stop()
-    return {"message": "Стрим остановлен"}

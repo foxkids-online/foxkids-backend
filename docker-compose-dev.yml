@@ -4,12 +4,15 @@ services:
     build: 
       context: ./
       dockerfile: Dockerfile-dev
-    env_file: 
-      - ./.env
     volumes:
-      - C://Users//User//Videos//foxkids_full/:/mnt/
+      - C://Users//User//Videos//foxkids_full/:/mnt/:ro
+      - ./html:/src/html:ro
+    environment: 
+      ENV_FOR_DYNACONF: development
     networks:
       - foxkids_network
+    ports:
+      - 8001:8000
 
 networks:
   foxkids_network:

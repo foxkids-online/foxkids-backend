@@ -13,6 +13,26 @@
     <script type="module" src="static/js/player.js"></script>
     <script src="static/js/pages.js"></script>
     <script src="static/js/promo.js"></script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(85844263, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/85844263" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
 </head>
 <link rel="stylesheet" href="static/css/style.css">
 <link rel="stylesheet" href="static/css/player.css">
@@ -39,7 +59,7 @@
                 <div class="red-container">
                     <div id="stream">
                         <div class="player-marquee-top"></div>
-                        <div class="player-marquee" >
+                        <div class="player-marquee">
                             <marquee behavior="scroll" direction="left">СТАРТ ТРАНСЛЯЦИИ РОВНО В
                                 7.00 КАЖДЫЙ ДЕНЬ! ВКЛЮЧАЙ И СМОТРИ FOXKIDS-ONLINE.RU</marquee>
                         </div>
@@ -47,7 +67,8 @@
 
                             <video id="my-video" class="video-js " enablePictureInPicture controls preload="auto"
                                 width="640" height="410">
-                                <source src="https://foxkids-online.ru/hls/test.m3u8" type="application/x-mpegURL" />
+                                <source src="https://foxkids-online.ru/hls/test.m3u8"
+                                    type="application/x-mpegURL" />
                                 <p class="vjs-no-js">
                                     Для просмотра видео используйте браузер, который поддерживает
                                     <a href="https://videojs.com/html5-video-support/" target="_blank"> HTML5
@@ -100,9 +121,15 @@
                             </div>
                         </div>
                         <div class="d-flex">
-                            <div class="youtube"></div>
-                            <div class="twitter"></div>
-                            <div class="vk"></div>
+                            <a href="https://www.youtube.com/@foxkids5544/videos">
+                                <div class="youtube"></div>
+                            </a>
+                            <a href="https://t.me/foxkids_online">
+                                <div class="twitter"></div>
+                            </a>
+                            <a href="https://vk.com/foxkids.online">
+                                <div class="vk"></div>
+                            </a>
                         </div>
                     </div>
                 </div>

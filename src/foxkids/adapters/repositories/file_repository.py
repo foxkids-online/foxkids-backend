@@ -82,9 +82,13 @@ class FileReaderWriter:
         program_json = self.read_json_file(settings.FILE_PROGRAM)
 
         for record in program_json:
-            record["series_list"] = list(
-                filter(lambda x: x.name in record["series_list"], series_list)
-            )
+            record["series_list"] = [
+                self.find_from_series_by_name(series_list, i)
+                for i in record["series_list"]
+            ]
+            record["series_list"] = [
+                i for i in record["series_list"] if i is not None
+            ]
             block = Block(**record)
             program.append(block)
 
@@ -117,3 +121,12 @@ class FileReaderWriter:
                 return json.load(f)
             except json.decoder.JSONDecodeError:
                 return []
+
+    @staticmethod
+    def find_from_series_by_name(
+        series_list: list[Series], name: str
+    ) -> Series | None:
+        for series in series_list:
+            if series.name == name:
+                return series
+        return None

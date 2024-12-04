@@ -6,11 +6,10 @@ RUN apt-get install -y ffmpeg
 
 COPY requirements.txt ./
 COPY constraints.txt ./
-COPY .env ./
+
 RUN python -m pip install -c constraints.txt -r requirements.txt
 
 COPY ./dev_mnt_sample/ /src/dev_mnt_sample
 COPY ./src/ /src
-COPY ./html /src/html
 WORKDIR /src
 CMD python -m foxkids

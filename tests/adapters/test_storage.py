@@ -7,7 +7,7 @@ from foxkids.settings import settings
 
 
 def test_get_full_path_none():
-    assert get_full_path("./foxkids/online.mp4") is None
+    assert get_full_path("online.mp4") == f"{settings.MAIN_FOLDER}/online.mp4"
 
 
 def test_get_full_path():
