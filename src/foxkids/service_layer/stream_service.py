@@ -54,13 +54,13 @@ class StreamService:
             for index, series in enumerate(block.series_list):
 
                 if index == len(block.series_list) - 1:
-                    curl = create_curl(series.name, "")
-                    stream.append(curl)
+                    curl_row = create_curl(series.name, "")
+                    stream.append(curl_row)
                 else:
-                    curl = create_curl(
+                    curl_row = create_curl(
                         series.name, block.series_list[index + 1].name
                     )
-                    stream.append(curl)
+                    stream.append(curl_row)
 
                 # получить промо сериала
                 series_promo = self.storage.get_series_promo(series.name)
