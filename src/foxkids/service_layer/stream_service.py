@@ -8,7 +8,7 @@ import schedule
 from foxkids.adapters import AbstractRepository, ScriptManager, Storage
 from foxkids.domain.features import get_series_list_by_day, increment_series
 from foxkids.settings import settings
-from foxkids.utils.bash_formatter import create_program_row
+from foxkids.utils.bash_formatter import create_curl, create_program_row
 
 
 class StreamService:
@@ -51,7 +51,16 @@ class StreamService:
             commertials = [create_program_row(i) for i in commertials]
             stream.extend(commertials)
 
-            for series in block.series_list:
+            for index, series in enumerate(block.series_list):
+
+                if index == len(block.series_list) - 1:
+                    curl_row = create_curl(series.name, "")
+                    stream.append(curl_row)
+                else:
+                    curl_row = create_curl(
+                        series.name, block.series_list[index + 1].name
+                    )
+                    stream.append(curl_row)
 
                 # получить промо сериала
                 series_promo = self.storage.get_series_promo(series.name)
@@ -67,6 +76,7 @@ class StreamService:
                 series_path = self.storage.get_series(
                     series.name, series.current
                 )
+
                 series_row = create_program_row(series_path)
                 stream.append(series_row)
         return stream

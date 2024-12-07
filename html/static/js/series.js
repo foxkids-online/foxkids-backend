@@ -4,9 +4,7 @@ $.ajax({
     url: "/api/series/",
     complete: function (data) {
         data1 = data.responseJSON;
-        console.log(data1)
         $.map(data1, function (i) {
-            console.log(i)
             if (i.name_rus !== "") {
                 let template = `
         <div  class="series-card">
