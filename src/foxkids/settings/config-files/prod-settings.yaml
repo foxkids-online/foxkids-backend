@@ -11,5 +11,5 @@ production:
   BLOCK_PROMO_FOLDER: reklama_block
   COMMERTIALS_FOLDER: reklama_random
   PLAY_SCRIPT: ffmpeg  -re -i {} -c:a aac -c:v libx264 -b:v 200k -b:a 64K -r 25 -s 320x240 -f flv {}
-  CURL_SCRIPT: "curl -X POST http://server/api/current_promo -H \"Content-Type: application/json\" -d '{{\"current_series\": \"{}\", \"next_series\": \"{}\"}}'"
+  CURL_SCRIPT: "curl -X POST http://server/api/current_promo/ -H \"Content-Type: application/json\" -d '{{\"current_series\": \"{}\", \"next_series\": \"{}\"}}'"
   PORT: 8000
