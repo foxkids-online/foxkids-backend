@@ -1,3 +1,6 @@
+
+![alt text](./source/readme-promo.jpg)
+
 # Проект FOX KIDS ONLINE 4
 Четвертая версия рефакторинга платформы трансляции американских мультсериалов Fox Kids Online
 
