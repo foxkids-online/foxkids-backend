@@ -17,7 +17,7 @@ body {
 .main-container {
     background-color: #0f0f0f;
     min-height: 97vh;
-    width:  840px;
+    width: 840px;
     border-radius: 16px;
     padding-right: 16px;
     display: inline-flex;
@@ -76,8 +76,9 @@ body {
     color: rgb(244, 244, 244);
     font-size: 12px;
 }
+
 .footer-item {
-    margin-bottom: 0px; 
+    margin-bottom: 0px;
 }
 
 .twitter {
@@ -144,26 +145,26 @@ li {
     background-size: cover;
 }
 
-.about-project-text{
+.about-project-text {
     background-color: #f2fc01;
     border: 4px solid;
     font-size: 12px;
-    font-weight:700;
+    font-weight: 700;
     padding: 6px;
     text-align: start;
     width: 580px;
     margin: 4px 0px;
 }
 
-.player-container{
+.player-container {
     background-color: #0f0f0f;
-    height: 360px ;
+    height: 360px;
     margin: 0 auto;
     text-align: center;
-    width: 512px ;
+    width: 512px;
 }
 
-.current-promo{
+.current-promo {
     background-color: #f2fc01;
     font-size: 12px;
     padding: 8px 20px;
@@ -171,7 +172,7 @@ li {
     border-radius: 0px 0px 8px 8px;
 }
 
-.promo-img{
+.promo-img {
     background-image: url('../sources/site/promo.png');
     border: 2px solid #000;
     border-radius: 4px;
@@ -191,14 +192,14 @@ li {
     text-align: start;
 }
 
-.series-card-logo{
+.series-card-logo {
     height: 150px;
     width: 100px;
     background-size: cover;
     background-image: url('../sources/series/pigcity.png');
 }
 
-.player-marquee{
+.player-marquee {
     width: 640px;
     background-color: #0f0f0f;
     color: #f4f4f4;
@@ -212,4 +213,12 @@ li {
     border-radius: 8px 8px 0px 0px;
 }
 
+@media (orientation: portrait) {
+    .side-panel {
+        display: none;
+    }
 
+    .main-container {
+        padding-left: 16px;
+    }
+}
