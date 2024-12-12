@@ -3,10 +3,19 @@ body {
 }
 
 
+.xmas{
+    background-image: url('../sources/site/xmas.png');
+    width: 100%;
+    height: 300px;
+    background-size: contain;
+    position: absolute;
+    top: -100px;
+}
 
 .main-background {
+    position: relative;
     text-align: center;
-    background-image: url('../sources/site/background.png');
+    background-image: url('../sources/site/background-xmas.png');
     min-height: 100vh;
     min-width: 100vw;
     display: flex;
@@ -15,6 +24,7 @@ body {
 }
 
 .main-container {
+    z-index: 10;
     background-color: #0f0f0f;
     min-height: 97vh;
     width: 840px;
@@ -34,7 +44,7 @@ body {
 }
 
 .side-panel-img-1 {
-    background-image: url('../sources/site/mainlogo.png');
+    background-image: url('../sources/site/mainlogo-xmas.png');
     background-size: cover;
     height: 139px;
     width: 138px;
