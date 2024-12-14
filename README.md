@@ -1,105 +1,98 @@
 
 ![alt text](./source/readme-promo.jpg)
 
-# Проект FOX KIDS ONLINE 4
-Четвертая версия рефакторинга платформы трансляции американских мультсериалов Fox Kids Online
+# Project FOX KIDS ONLINE 4
+The fourth version of the refactoring of the platform for broadcasting American animated series Fox Kids Online
 
-## О проекте
-Код платформы сайта foxkids-online.ru  
-Документация Swagger по пути /docs
+## About the project
+Platform code of the site foxkids-online.ru
+Swagger documentation is located in the /docs path
 
-## Описание дерева проекта
+## Description of the project tree
 
 html - папка фронтенда  
 --static  
 ----css  
 ----js  
 ----sources  
-------promos - изображения для промо  
-------series - избражения для карточек сериалов  
-------site - оформление сайта  
+------promos - images for promo  
+------series - images of series cards   
+------site - site styling    
 ----favicon.ico  
-src - папка с проектом бекенда  
-tests - автотесты  
+src - folder with backend main project    
+tests - autotests  
 
 
-## Полезные скрипты (производятся из корня директории проекта)
+## Useful scripts (run from the project directory root)
 
-Запуск автотестов
-
+Running the autotests:
 `python -m pytest -s`
 
-Запуск сервера документации к коду
-
+Starting the code documentation server:
 `poetry run pdoc --http 0.0.0.0:8000`
 
-Запуск проекта
-
+Launching the project:
 `poetry run python -m foxkids`
 
-Загрузка плагина poetry-dotenv для чтения .env
-
+Loading the poetry-dotenv plugin to read .env:
 `poetry self add poetry-dotenv-plugin`
 
-Проверка покрытия тестами
-
+Checking test coverage:
 `pytest --cov=foxkids tests/ --cov-report html`
 
-## Переменные окружения
-
-| Название переменной | Значение | Комментарий |
+## Environment variables
+| Variable name | Value | Comment |
 | --- | --- | --- |
-| ENV_FOR_DYNACONF | production, development,   test | переменная для указания среды стенда |
+| ENV_FOR_DYNACONF | production, development, test | variable to indicate the environment of the stand |
 
-## Конфигурации приложения
+## Application configurations
 
-Скрипты приложения находятся в папке settings.  
-Внутри config-files находятся сами файлы конфигурации:  
+The application scripts are located in the settings folder. Inside config-files, there are the configuration files themselves:  
+* dev-settings.yaml — development environment  
+* test-settings.yaml — testing environment, autotests are launched from it  
+* prod-settings.yaml — production  
 
-dev-setttings.yaml - дев среда  
-test-settings.yaml - среда тестирования, с нее запускаются автотесты  
-prod-settings.yaml - прод  
+Dockerfile — production environment  
+Dockerfile-dev — development environment  
 
-Dockerfile - прод среда
-Dockerfile-dev - дев среда
+| Variable name       | Value                           | Example of filling                                                     |
+| ------------------- | ------------------------------- | ---------------------------------------------------------------------- |
+| COUNT_COMMERTIALS   | Number of commercials between blocks | 2                                                                 |
+| TIME_START          | Start time of the broadcast       | 07:00                                                                |
+| STREAM_URL          | Stream address                   | rtmp://server_rtmp:1935/stream/test                                   |
+| MAIN_FOLDER         | Main folder of the broadcasting cloud | dev_mnt_sample/foxkids                                           |
+| FILE_PROGRAM        | Program file                     | dev_mnt_sample/program.json                                           |
+| FILE_SERIES         | File with TV series | dev_mnt_sample/series.json                                                         |
+| FILE_STREAM         | Streaming script   | dev_mnt_sample/stream.sh                                                            |
+| PROMO_FOLDER        | Folder with promos of TV series inside the main folder of the cloud | reklama                            |
+| BLOCK_PROMO_FOLDER  | Folder with promo blocks inside the main folder of the cloud | reklama_block                             |
+| COMMERTIALS_FOLDER  | Folder with random commercials inside the main folder of the cloud | reklama_random                      |
+| PLAY_SCRIPT         | Mask of the ffmpeg launch script line       | ffmpeg -re -i {file address} -f flv {broadcast address}    |
+| CURL_SCRIPT         | Address for setting up the promo of the next episode | Variable to indicate the environment of the stand |
+| PORT                | Port of the broadcast server                  | Variable to indicate the environment of the stand.       |
 
-| Название переменной | Значение | Пример заполнения                                                                       |
-| ------------------- | ------------------------------- | ---------------------------------------------------------------- |
-| COUNT_COMMERTIALS   | количество реклам между блоками | 2                                                                |
-| TIME_START          | время старта трансляции | 07:00                                                                    |
-| STREAM_URL          | адрес стрима | rtmp://server_rtmp:1935/stream/test                                                 |
-| MAIN_FOLDER         | главная папка облака трансляции | dev_mnt_sample/foxkids                                           |
-| FILE_PROGRAM        | файл программы передач | dev_mnt_sample/program.json                                               |
-| FILE_SERIES         | файл с сериалами | dev_mnt_sample/series.json                                                      |
-| FILE_STREAM         | скрипт трансляции | dev_mnt_sample/stream.sh                                                       |
-| PROMO_FOLDER        | папка с промо сериалов внутри основной папки облака | reklama                                      |
-| BLOCK_PROMO_FOLDER  | папка с промо блоков внутри основной папки облака | reklama_block                                  |
-| COMMERTIALS_FOLDER  | папка рандомных реклам внутри основной папки облака | reklama_random                               |
-| PLAY_SCRIPT         | маска строки скрипта запуска ffmpeg       | ffmpeg  -re -i {адрес файла} -f flv {адрес трансляции} |
-| CURL_SCRIPT         | адрес для установки промо следующей серии | переменная для указания среды стенда                   |
-| PORT                | порт сервера трансляции                   | переменная для указания среды стенда                   |
+**Full script mask template:**
 
-полный шаблон маски скрипта: 
+`ffmpeg -re -i {file} -c:a aac -c:v libx264 -b:v 200k -b:a 64K -r 25 -s 320x240 -f flv {broadcast address}`
 
-`ffmpeg  -re -i {файл} -c:a aac -c:v libx264 -b:v 200k -b:a 64K -r 25 -s 320x240 -f flv {адрес трансляции}`
+**Full address of the script for setting up the promo of the next episode:**
 
-полный адрес скрипта для установки промо следующей серии
+`curl -X POST https://reqbin.com/echo/post/json -H "Content-Type: application/json" -d '{{"current_series": "{}"", "next_series": "{}"}}'`
 
-`curl -X POST https://reqbin.com/echo/post/json -H \"Content-Type: application/json\" -d '{{\"current_series\": \"{}\", \"next_series\": \"{}\"}}'`
+## Linters
 
-## Линтеры
+`isort isort --settings-path pyproject.toml .` — sorts and makes beautiful imports in all files
 
-`isort isort --settings-path pyproject.toml .`  - отсортирует и сделает красивые импорты во всех файлах  
-`black -l 79 --preview .` или `black --config pyproject.toml .`  - отформатирует код  
-`flake8 .`  - проверит кодстайл  
-`mypy . --ignore-missing-imports` или `mypy --config pyproject.toml .`  - проверит типизацию  
+`black -l 79 --preview .` or `black --config pyproject.toml .` — formats the code
 
-## Установка pre-commit
+`flake8 .` — checks the code style
 
-- Установить pre-commit через `poetry add pre-commit`  
-- Установить pre-commit хуки через `pre-commit install`  
-- При создании коммита будут срабатывать хуки из файла `.pre-commit-config.yaml`
+`mypy . --ignore-missing-imports` or `mypy --config pyproject.toml .` — checks typing
 
+## Installing pre-commit
 
+- Install pre-commit via `poetry add pre-commit`
 
-                    
+- Install pre-commit hooks via `pre-commit install`
+
+- When creating a commit, hooks from the `.pre-commit-config.yaml` file will be triggered
