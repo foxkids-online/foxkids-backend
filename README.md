@@ -46,12 +46,14 @@ Checking test coverage:
 | ENV_FOR_DYNACONF | production, development, test | variable to indicate the environment of the stand |
 
 ## Application configurations
-The application scripts are located in the settings folder. Inside config-files, there are the configuration files themselves:
-* dev-settings.yaml — development environment
-* test-settings.yaml — testing environment, autotests are launched from it
-* prod-settings.yaml — production
-Dockerfile — production environment
-Dockerfile-dev — development environment
+
+The application scripts are located in the settings folder. Inside config-files, there are the configuration files themselves:  
+* dev-settings.yaml — development environment  
+* test-settings.yaml — testing environment, autotests are launched from it  
+* prod-settings.yaml — production  
+
+Dockerfile — production environment  
+Dockerfile-dev — development environment  
 
 | Variable name       | Value                           | Example of filling                                                     |
 | ------------------- | ------------------------------- | ---------------------------------------------------------------------- |
