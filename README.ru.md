@@ -98,7 +98,34 @@ Dockerfile-dev - дев среда
 
 - Установить pre-commit через `poetry add pre-commit`  
 - Установить pre-commit хуки через `pre-commit install`  
-- При создании коммита будут срабатывать хуки из файла `.pre-commit-config.yaml`
+- При создании коммита будут срабатывать хуки из файла `.pre-commit-config.yaml`  
+
+## Настройка удаленной машины для деплоя 
+
+Условия:
+- установлен docker
+- установлен docker-compose
+
+Создание отдельно пользователя $SSH_USER на удаленной машине:  
+`useradd $SSH_USER`  
+
+Выдача прав владельца на папку пользователя  
+`sudo chown -R $SSH_USER: /home/$SSH_USER/*`  
+
+Создание ключа  (выполнять от лица пользователя, который ответственен за деплой)
+`ssh-keygen -t rsa -b 4096`  
+
+Запись ключа в файл  
+`cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys`  
+
+Проверка ключа, он же понадобится в переменной $SSH_KEY*
+`cat ~/.ssh/id_rsa`  
+
+На самой машине добавить пользователю права на докер  
+`sudo chown $SSH_USER /var/run/docker.sock`  
+
+Внутри папки `/home/$SSH_USER/` , создать папку $WORKDIR куда будет производиться установка проекта
+
 
 
 
