@@ -1,4 +1,3 @@
-import os
 import time
 from datetime import datetime
 
@@ -89,12 +88,6 @@ class StreamService:
                 commertials.append(commertial)
             counter -= 1
         return commertials
-
-    def __start_script(self):
-        """
-        просто запускает sh файл как есть
-        """
-        os.system(f"sh {self.script_manager.file_stream}")
 
     def start(self, increase_series: bool = True):
         """

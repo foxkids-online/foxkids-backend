@@ -60,7 +60,7 @@ class FileRepository(AbstractRepository):
             for updated_block in blocks:
                 if block == updated_block:
                     full_blocks_list[i] = updated_block
-        self.fw.save(full_blocks_list, settings.FILE_SERIES)
+        self.fw.save(full_blocks_list, settings.FILE_PROGRAM)
 
     def clear_series(self):
         self.fw.save([], settings.FILE_SERIES)
@@ -111,7 +111,7 @@ class FileReaderWriter:
             i.to_dict() for i in data
         ]  # TODO: нейминг избегать однобуквенных
         with open(filepath, "w", encoding="utf-8") as f:
-            json.dump(result, f)
+            json.dump(result, f, ensure_ascii=False)
 
     @staticmethod
     def read_json_file(filename: str) -> list[dict]:
