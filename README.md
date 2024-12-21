@@ -95,4 +95,34 @@ Dockerfile-dev — development environment
 
 - Install pre-commit hooks via `pre-commit install`
 
-- When creating a commit, hooks from the `.pre-commit-config.yaml` file will be triggered
+- When creating a commit, hooks from the `.pre-commit-config.yaml` file will be triggered  
+
+REAMDE.md — это, вероятно, название файла или репозитория. Если вам нужно перевести его содержимое на английский язык, я могу помочь с этим. Пожалуйста, уточните запрос.
+
+Перевод содержимого файла REAMDE.md с русского на английский:
+
+## Setting up a remote machine for deployment
+
+**Prerequisites:**
+- Docker is installed
+- Docker Compose is installed
+
+Creating a separate user $SSH_USER on the remote machine:  
+`useradd $SSH_USER`  
+
+Granting ownership of the user's folder  
+`sudo chown -R $SSH_USER: /home/$SSH_USER/*`  
+
+Generating a key (run as the user responsible for deployment):  
+`ssh-keygen -t rsa -b 4096`  
+
+Adding the key to the file:  
+`cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys`  
+
+Checking the key, it will also be needed in the $SSH_KEY variable:  
+`cat ~/.ssh/id_rsa`  
+
+On the machine itself, add Docker permissions to the user:  
+`sudo chown $SSH_USER /var/run/docker.sock`  
+
+Inside the `/home/$SSH_USER/` folder, create a $WORKDIR folder where the project will be installed.
