@@ -4,6 +4,9 @@
 # Project FOX KIDS ONLINE 4
 The fourth version of the refactoring of the platform for broadcasting American animated series Fox Kids Online
 
+🌎 [Project's web-site](https://foxkids-online.ru/)  
+💼 [Foxkids organization's page](https://github.com/foxkids-online)  
+
 ## About the project
 Platform code of the site foxkids-online.ru
 Swagger documentation is located in the /docs path
@@ -58,7 +61,7 @@ Dockerfile-dev — development environment
 | Variable name       | Value                           | Example of filling                                                     |
 | ------------------- | ------------------------------- | ---------------------------------------------------------------------- |
 | COUNT_COMMERTIALS   | Number of commercials between blocks | 2                                                                 |
-| TIME_START          | Start time of the broadcast       | 07:00                                                                |
+| TIME_START          | Time count series                | 07:00                                                                 |
 | STREAM_URL          | Stream address                   | rtmp://server_rtmp:1935/stream/test                                   |
 | MAIN_FOLDER         | Main folder of the broadcasting cloud | dev_mnt_sample/foxkids                                           |
 | FILE_PROGRAM        | Program file                     | dev_mnt_sample/program.json                                           |
