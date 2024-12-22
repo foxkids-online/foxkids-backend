@@ -21,7 +21,7 @@ def test_start_stream():
 
 @mark.skip(reason="попытка обновить дни стрима")
 def test_increase_series():
-    days = [1, 2, 3, 4, 5, 6, 0, 1, 2, 3, 4, 5, 6, 0, 1, 2, 3, 4, 5, 6]
+    days = [1]
     for day in days:
         print(f"day={day}")
         repository = FileRepository()
@@ -29,3 +29,13 @@ def test_increase_series():
         series_in_day = get_series_list_by_day(blocks)
         updating_series = increment_series(series_in_day)
         repository.update_series_list(updating_series)
+
+
+@mark.skip(reason="попытка обновить скрипт")
+def test_write_script():
+    repository = FileRepository()
+    storage = Storage()
+    manager = ScriptManager()
+    service = StreamService(repository, storage, manager)
+    lines = service.create_stream()
+    manager.write_stream_script(lines)

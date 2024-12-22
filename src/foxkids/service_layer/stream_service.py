@@ -99,11 +99,11 @@ class StreamService:
             self.script_manager.write_stream_script(
                 lines
             )  # перезапись скрипта
-            today = datetime.now().weekday()
-            blocks = self.repository.get_blocks(today)  # пересчет серий
-            series_in_day = get_series_list_by_day(blocks)
-            updating_series = increment_series(series_in_day)
-            self.repository.update_series_list(updating_series)
+        today = datetime.now().weekday()
+        blocks = self.repository.get_blocks(today)  # пересчет серий
+        series_in_day = get_series_list_by_day(blocks)
+        updating_series = increment_series(series_in_day)
+        self.repository.update_series_list(updating_series)
 
     def start_stream_scheduled(self):
         schedule.every().day.at(settings.TIME_START).do(self.start)
