@@ -88,6 +88,7 @@ jobs:
           echo "${{ secrets.DOCKER_TOKEN }}" | docker login "${{ vars.DOCKER_PATH }}" -u "${{ vars.DOCKER_USER }}" --password-stdin && 
           rm -f docker-compose.yml && 
           curl https://raw.githubusercontent.com/${{ env.REPO }}/refs/heads/${{ env.BRANCH }}/docker-compose.yml > docker-compose.yml && 
+          docker-compose build --no-cache && 
           docker-compose -f docker-compose.yml up -d --no-deps --force-recreate'
       - name: Clear ssh on runner
         run: rm -r ~/.ssh
