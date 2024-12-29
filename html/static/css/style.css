@@ -95,6 +95,13 @@ body {
     background-size: cover;
 }
 
+.github {
+    background-image: url('../sources/site/github.png');
+    width: 36px;
+    height: 34px;
+    background-size: cover;
+}
+
 .vk {
     background-image: url('../sources/site/vk2.png');
     width: 36px;
