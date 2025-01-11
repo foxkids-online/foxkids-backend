@@ -3,8 +3,8 @@ $.ajax({
     dataType: "json",
     url: "/api/series/",
     complete: function (data) {
-        data1 = data.responseJSON;
-        $.map(data1, function (i) {
+        series = data.responseJSON;
+        $.map(series, function (i) {
             if (i.name_rus !== "") {
                 let template = `
         <div  class="series-card">

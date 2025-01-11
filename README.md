@@ -13,7 +13,7 @@ Swagger documentation is located in the /docs path
 
 ## Description of the project tree
 
-html - папка фронтенда  
+html - frontend folder  
 --static  
 ----css  
 ----js  
@@ -99,10 +99,6 @@ Dockerfile-dev — development environment
 - Install pre-commit hooks via `pre-commit install`
 
 - When creating a commit, hooks from the `.pre-commit-config.yaml` file will be triggered  
-
-REAMDE.md — это, вероятно, название файла или репозитория. Если вам нужно перевести его содержимое на английский язык, я могу помочь с этим. Пожалуйста, уточните запрос.
-
-Перевод содержимого файла REAMDE.md с русского на английский:
 
 ## Setting up a remote machine for deployment
 
