@@ -19,7 +19,7 @@ function getProgram() {
             type: "GET",
             dataType: "json",
             url: "/api/block/",
-            data: { "weekday": new Date().getDay() },
+            data: { "weekday": new Date().getDay() - 1 },
             success: function (data) { return data.responseJSON }
         })).then(function (series, blocks) {
             series = series[0]
