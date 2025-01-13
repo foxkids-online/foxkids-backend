@@ -16,6 +16,7 @@
     <script type="module" src="static/js/player.js"></script>
     <script src="static/js/pages.js"></script>
     <script src="static/js/promo.js"></script>
+    <script src="static/js/program.js"></script>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
         (function (m, e, t, r, i, k, a) {
@@ -40,11 +41,21 @@
 <link rel="stylesheet" href="static/css/style.css">
 <link rel="stylesheet" href="static/css/player.css">
 <link rel="stylesheet" href="static/css/fonts.css">
+<link rel="stylesheet" href="static/css/modal.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 <body>
-    <div class="main-background">
+    <div class="main-background position-relative">
+        <div id="modal-panel" class="modal-wrapper  position-absolute">
+            <h3>Программа передач на сегодня</h3>
+        </div>
+        <div id="program-modal" class="modal-wrapper position-absolute">
+            <div id="close-program-modal" class="position-absolute">
+                X
+            </div>
+            
+        </div>
         <div class="main-container">
             <div class="side-panel">
                 <div class="side-panel-img-1"></div>
@@ -54,7 +65,11 @@
             </div>
             <div id="tabs" class="d-flex flex-column w-100">
                 <ul class="header position-relative w-100 py-2">
-                    <!-- <li><a href="#stream" class="header-item px-2 position-absolute top-0 start-0">📺 ТЕЛЕПРОГРАММА</a></li> -->
+                    <li>
+                        <div id="program-button" class="header-item px-2 position-absolute top-0"
+                            style="left:0;cursor:pointer">📺
+                            ТЕЛЕПРОГРАММА</div>
+                    </li>
                     <li><a href="#stream" class="header-item px-2">ЭФИР</a></li>
                     <li><a href="#series" class="header-item px-2">СЕРИАЛЫ</a></li>
                     <li><a href="#about_channel" class="header-item px-2">О FOXKIDS</a></li>
@@ -62,13 +77,10 @@
                 </ul>
                 <div class="red-container">
                     <div id="stream">
-                        <!-- <div class="pb-1 d-flex w-100">
-                            <button class="rounded">📺 ПРОГРАММА ПЕРЕДАЧ</button>
-                        </div> -->
                         <div class="player-marquee-top"></div>
                         <div class="player-marquee">
                             <marquee behavior="scroll" direction="left">СТАРТ ТРАНСЛЯЦИИ РОВНО В
-                                7.00 КАЖДЫЙ ДЕНЬ! ВКЛЮЧАЙ И СМОТРИ FOXKIDS-ONLINE.RU</marquee>
+                                7.00 ПО МОСКВЕ КАЖДЫЙ ДЕНЬ! ВКЛЮЧАЙ И СМОТРИ FOXKIDS-ONLINE.RU</marquee>
                         </div>
                         <div>
 
