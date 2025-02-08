@@ -3,10 +3,10 @@ function findRusNameByEngName(name, series) {
         if (series[i].name == name) {
             if (series[i].name_rus != "") {
                 return series[i].name_rus
+            } else {
+                return name
             }
-        } else {
-            return name
-        }
+        } 
     }
 }
 
