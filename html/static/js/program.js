@@ -1,10 +1,13 @@
 function findRusNameByEngName(name, series) {
     for (let i = 0; i < series.lenght; ++i) {
         if (series[i].name == name) {
+            if (series[i].rus_name != "")
             return series[i].name_rus
+        } else {
+            return name
         }
     }
-    return name
+    
 }
 
 function getProgram() {
