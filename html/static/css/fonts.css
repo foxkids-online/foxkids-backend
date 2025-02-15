@@ -2,3 +2,10 @@
   font-family: "Comics";
   src: url("./ComicSansRus.ttf");
 }
+
+@property
+--middle-size{
+    syntax: "<length>";
+    inherits: false;
+    initial-value: 12px;
+}
