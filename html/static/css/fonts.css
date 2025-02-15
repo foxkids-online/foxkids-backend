@@ -4,8 +4,15 @@
 }
 
 @property
---middle-size{
+--middle-font-size{
     syntax: "<length>";
     inherits: false;
     initial-value: 12px;
+}
+
+@property
+--modal-font-size{
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 16px;
 }

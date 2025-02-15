@@ -30,7 +30,7 @@
     min-width: 560px;
     z-index: 15;
     width: 400px;
-    font-size: 20px;
+    font-size: var(--modal-font-size);
     overflow-y: scroll;
     font-family: "Comics";
 }
