@@ -2,7 +2,7 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    background-color: white;
+    background-color: var(--white-color);
     z-index: 3;
     opacity: 30%;
     
@@ -13,7 +13,7 @@
 }
 
 #close-program-modal {
-    color: #0f0f0f;
+    color: var(--black-color);
     top: -8px;
     right: 21px;
     font-size: 40px;
@@ -21,7 +21,7 @@
 }
 
 #modal-panel {
-    background-color: rgba(247, 247, 247, 100);
+    background-color: var(--white-color);
     top: 50px;
     left: 31%;
     padding: 32px;

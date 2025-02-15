@@ -1,8 +1,8 @@
 .video-js .vjs-big-play-button .vjs-icon-placeholder:before{
-    background-color: #940203 !important;
+    background-color: var(--red-color) !important;
 }
 
 
 .video-js .vjs-big-play-button{
-    border: 3px solid #fff !important;
+    border: 3px solid var(--white-color) !important;
 }

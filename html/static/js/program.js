@@ -38,7 +38,7 @@ function getProgram() {
                 for (let j = 0; j < series_list.length; ++j) {
                     let rusName = findRusNameByEngName(series_list[j], series)
                     $('#modal-panel').append(`
-                        <div>📺 ${rusName}</div>
+                        <div>📺 ${rusName.charAt(0).toUpperCase() + rusName.slice(1).toLowerCase()}</div>
                     `)
                 }
             }

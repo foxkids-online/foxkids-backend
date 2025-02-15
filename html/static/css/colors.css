@@ -1,0 +1,25 @@
+@property --red-color {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #940203;
+  }
+
+@property --black-color {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #0f0f0f;
+}
+
+@property
+--white-color {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #f4f4f4;
+}
+
+@property
+--yellow-color {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #f2fc01;
+}
