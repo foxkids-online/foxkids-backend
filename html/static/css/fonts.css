@@ -1,11 +1,18 @@
 @font-face {
   font-family: "Comics";
-  src: url("./ComicSansRus.ttf");
+  src: url("../fonts/ComicSansRus.ttf");
 }
 
 @property
---middle-size{
+--middle-font-size{
     syntax: "<length>";
     inherits: false;
     initial-value: 12px;
+}
+
+@property
+--modal-font-size{
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 16px;
 }

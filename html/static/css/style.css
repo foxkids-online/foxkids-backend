@@ -18,7 +18,6 @@ body {
     width: 840px;
     border-radius: 16px;
     padding-right: 16px;
-    display: inline-flex;
     font-family: "Comics";
 }
 
@@ -63,7 +62,7 @@ body {
     margin: 0px;
     height: 32px;
     color: var(--white-color);
-    font-size: var(--middle-size);
+    font-size: var(--middle-font-size);
     display: flex;
     justify-content: end;
 }
@@ -72,7 +71,7 @@ body {
     width: 100%;
     height: 100px;
     color: var(--white-color);
-    font-size: var(--middle-size);
+    font-size: var(--middle-font-size);
 }
 
 .footer-item {
@@ -153,7 +152,7 @@ li {
 .about-project-text {
     background-color: var(--yellow-color);
     border: 4px solid var(--black-color);
-    font-size: var(--middle-size) ;
+    font-size: var(--middle-font-size) ;
     font-weight: 700;
     padding: 6px;
     text-align: start;
@@ -171,7 +170,7 @@ li {
 
 .current-promo {
     background-color: var(--yellow-color);
-    font-size: var(--middle-size);
+    font-size: var(--middle-font-size);
     padding: 8px 20px;
     text-align: left;
     border: 6px solid var(--black-color);
@@ -192,7 +191,7 @@ li {
     background-color: var(--yellow-color);
     border: 7px solid var(--black-color);
     display: flex;
-    font-size: var(--middle-size);
+    font-size: var(--middle-font-size);
     font-weight: 700;
     justify-content: space-between;
     margin: 10px;
@@ -210,7 +209,7 @@ li {
     width: 640px;
     background-color: var(--black-color);
     color: var(--white-color);
-    font-size: var(--middle-size);
+    font-size: var(--middle-font-size);
 }
 
 .player-marquee-top {
