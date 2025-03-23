@@ -10,6 +10,14 @@ function findRusNameByEngName(name, series) {
     }
 }
 
+function getWeekDay() {
+    let date = new Date().getDay() - 1 
+    if (date == -1) {
+        return 6
+    }
+    return date
+}
+
 function getProgram() {
     $.when(
         $.ajax({
@@ -22,7 +30,7 @@ function getProgram() {
             type: "GET",
             dataType: "json",
             url: "/api/block/",
-            data: { "weekday": new Date().getDay() - 1 },
+            data: { "weekday": getWeekDay() },
             success: function (data) { return data.responseJSON }
         })).then(function (series, blocks) {
             series = series[0]
