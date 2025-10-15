@@ -31,10 +31,10 @@ body {
 }
 
 .side-panel-img-1 {
-    background-image: url('../sources/site/mainlogo.png');
+    background-image: url('../sources/site/halloween_logo_site.png');
     background-size: cover;
-    height: 139px;
-    width: 138px;
+    height: 150px;
+    width: 150px;
 }
 
 .side-panel-img-2 {
@@ -45,17 +45,17 @@ body {
 }
 
 .side-panel-img-3 {
-    background-image: url('../sources/site/spiderman_logo.png');
+    background-image: url('../sources/site/spider\ monster.png');
     background-size: cover;
     width: 145px;
-    height: 85px;
+    height: 133px;
 }
 
 .side-panel-img-4 {
-    background-image: url('../sources/site/ash.png');
+    background-image: url('../sources/site/Beetleborg-green.png');
     background-size: cover;
-    width: 138px;
-    height: 284px;
+    width: 160px;
+    height: 255px;
 }
 
 .header {
