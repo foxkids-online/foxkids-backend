@@ -4,7 +4,7 @@ body {
 
 .main-background {
     text-align: center;
-    background-image: url('../sources/site/background.png');
+    background-image: url('../sources/site/background-halloween.png');
     min-height: 100vh;
     min-width: 100vw;
     display: flex;
