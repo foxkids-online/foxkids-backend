@@ -15,4 +15,4 @@ RUN python -m pip install -c constraints.txt -r requirements.txt
 COPY ./src/ /src
 COPY ./series_settings /series_settings/
 WORKDIR /src
-CMD ["python", "-m", "main"]
+CMD ["python", "-m", "foxkids"]
