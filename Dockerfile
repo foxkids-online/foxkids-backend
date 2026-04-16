@@ -1,9 +1,11 @@
-FROM python:3.12.0b1-slim-buster
+FROM python:3.12-slim-bookworm
 
-RUN apt-get -y update
-RUN apt-get -y upgrade
-RUN apt-get install -y ffmpeg
-RUN apt-get -y install curl
+RUN apt-get update && \
+    apt-get upgrade -y && \
+    apt-get install -y --no-install-recommends \
+    ffmpeg \
+    curl && \
+    rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt ./
 COPY constraints.txt ./
@@ -13,4 +15,4 @@ RUN python -m pip install -c constraints.txt -r requirements.txt
 COPY ./src/ /src
 COPY ./series_settings /series_settings/
 WORKDIR /src
-CMD python -m foxkids
+CMD ["python", "-m", "foxkids"]
