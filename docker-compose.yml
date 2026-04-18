@@ -11,7 +11,7 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - ./series_settings/:/series_settings/
-      - /mnt/foxkids/:/mnt/:ro
+      - /mnt/foxkids/:/mnt/foxkids:ro
       - ./html/:/src/html/:ro
     networks:
       - foxkids_network
