@@ -1,14 +1,8 @@
 
-![alt text](./source/readme-promo.jpg)
-
 # Project FOX KIDS ONLINE 4
 The fourth version of the refactoring of the platform for broadcasting American animated series Fox Kids Online
 
-🌎 [Project's web-site](https://foxkids-online.ru/)  
-💼 [Foxkids organization's page](https://github.com/foxkids-online)  
-
 ## About the project
-Platform code of the site foxkids-online.ru
 Swagger documentation is located in the /docs path
 
 ## Description of the project tree

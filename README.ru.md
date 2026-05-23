@@ -4,11 +4,7 @@
 # Проект FOX KIDS ONLINE 4
 Четвертая версия рефакторинга платформы трансляции американских мультсериалов Fox Kids Online
 
-🌎 [Веб-сайт проекта](https://foxkids-online.ru/)  
-💼 [Страница организации](https://github.com/foxkids-online)  
-
 ## О проекте
-Код платформы сайта foxkids-online.ru  
 Документация Swagger по пути /docs
 
 ## Описание дерева проекта
