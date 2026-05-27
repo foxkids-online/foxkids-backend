@@ -1,0 +1,19 @@
+.blink-text {
+    animation: rainbow-colors 4s linear infinite;
+    color: #ff0055; 
+    font-weight: bold;
+    text-align: center;
+    display: block; 
+}
+
+@keyframes blinker {
+    50% { opacity: 0; }
+}
+
+@keyframes rainbow-colors {
+    0%   { color: var(--red-color); } 
+    25%  { color: var(--yellow-color); } 
+    50%  { color: #00ccff; } 
+    75%  { color: #00ff66; } 
+    100% { color: var(--red-color); } 
+}
