@@ -5,7 +5,7 @@ function checkDomainAndSetStream() {
 
     // Определяем базовый путь в зависимости от домена
     if (currentHost === 'foxkids.club' || currentHost === 'www.foxkids.club') {
-        streamBaseUrl = '//stream.foxkids.club/hls/test/index.m3u8';
+        currentProtocol = '//stream.foxkids.club/hls/test/index.m3u8';
         console.log("Плеер: Включен поток НОВОГО домена");
     } 
     else {
