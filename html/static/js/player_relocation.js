@@ -1,21 +1,22 @@
 function checkDomainAndSetStream() {
     let currentHost = window.location.hostname;
-    let currentProtocol = window.location.protocol; // Получаем текущий протокол (http: или https:)
-    let streamBaseUrl = '';
+    let currentProtocol = window.location.protocol; // Получим 'http:' или 'https:'
+    let streamPath = '';
 
-    // Определяем базовый путь в зависимости от домена
+    // Определяем базовый путь к стриму в зависимости от домена сайта
     if (currentHost === 'foxkids.club' || currentHost === 'www.foxkids.club') {
-        currentProtocol = '//stream.foxkids.club/hls/test/index.m3u8';
-        console.log("Плеер: Включен поток НОВОГО домена");
-    } 
-    else {
-        streamBaseUrl = '//foxkids-online.ru/hls/test/index.m3u8';
+        streamPath = 'stream.foxkids.club/hls/test/index.m3u8';
+        console.log("Плеер: Включен поток НОВОГО домена без прокси");
+    } else {
+        streamPath = 'foxkids-online.ru/hls/test/index.m3u8';
         console.log("Плеер: Включен поток СТАРОГО домена");
     }
 
-    // Собираем итоговую ссылку с текущим протоколом
-    let fullStreamUrl = currentProtocol + streamBaseUrl;
+    // Собираем правильную итоговую ссылку: например, https://stream.foxkids.club/...
+    let fullStreamUrl = currentProtocol + '//' + streamPath;
+    console.log("Итоговая ссылка на поток:", fullStreamUrl);
 
+    // Заряжаем ссылку в Video.js
     videojs('my-video').src({
         src: fullStreamUrl,
         type: 'application/x-mpegURL'
