@@ -39,15 +39,15 @@ class StreamService:
         blocks = self.repository.get_blocks(today)
 
         for block in blocks:
-            # получить промо блока
-            block_promo = self.storage.get_block_promo(block.name)
-            bash_block_promo = create_program_row(block_promo)
-            stream.append(bash_block_promo)
+            # # получить промо блока
+            # block_promo = self.storage.get_block_promo(block.name)
+            # bash_block_promo = create_program_row(block_promo)
+            # stream.append(bash_block_promo)
 
-            # получить две рандомных рекламы
-            commertials = self.__get_random_commertials()
-            commertials = [create_program_row(i) for i in commertials]
-            stream.extend(commertials)
+            # # получить две рандомных рекламы
+            # commertials = self.__get_random_commertials()
+            # commertials = [create_program_row(i) for i in commertials]
+            # stream.extend(commertials)
 
             for index, series in enumerate(block.series_list):
 
@@ -60,15 +60,15 @@ class StreamService:
                     )
                     stream.append(curl_row)
 
-                # получить промо сериала
-                series_promo = self.storage.get_series_promo(series.name)
-                series_promo = create_program_row(series_promo)
-                stream.append(series_promo)
+                # # получить промо сериала
+                # series_promo = self.storage.get_series_promo(series.name)
+                # series_promo = create_program_row(series_promo)
+                # stream.append(series_promo)
 
-                # получить рекламу
-                commertials = self.__get_random_commertials()
-                commertials = [create_program_row(i) for i in commertials]
-                stream.extend(commertials)
+                # # получить рекламу
+                # commertials = self.__get_random_commertials()
+                # commertials = [create_program_row(i) for i in commertials]
+                # stream.extend(commertials)
 
                 # получить серию
                 series_path = self.storage.get_series(
